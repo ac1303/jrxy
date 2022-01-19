@@ -1,0 +1,47 @@
+[user]
+; 只需要填这里的信息
+studentid = 
+password = 
+lon = 112.331619
+lat = 32.887062
+address = 河南省南阳市卧龙区青华镇
+address_province = 河南省
+address_city = 南阳市
+address_region = 卧龙区
+; 手机型号
+model = Redmi K20 Pro Premium Edition
+; 这里填server酱的推送key
+servesendkey = SCT81708Tgz4lewIrwFEqcDaXN8MvpUYP
+
+[url]
+; 不可擅自修改这里的内容
+login_url = http://cas.huat.edu.cn/authserver/login
+gethww_url = https://huat.campusphere.net/wec-portal-mobile/client/
+cas_url = https://huat.campusphere.net/iap/login?service=https://huat.campusphere.net/wec-portal-mobile/client/
+tasks_url = https://huat.campusphere.net/wec-counselor-sign-apps/stu/sign/getStuSignInfosInOneDay
+sign_url = https://huat.campusphere.net/wec-counselor-sign-apps/stu/sign/submitSign
+collector_url = https://huat.campusphere.net/wec-counselor-collector-apps/stu/collector/queryCollectorProcessingList
+collector_detail_url = https://huat.campusphere.net/wec-counselor-collector-apps/stu/collector/detailCollector
+collector_form_url = https://huat.campusphere.net/wec-counselor-collector-apps/stu/collector/getFormFields
+collector_submitform_url = https://huat.campusphere.net/wec-counselor-collector-apps/stu/collector/submitForm
+
+[key]
+; 不可擅自修改这里的内容
+deskey = b3L26XNL
+aeskey = ytUQ7l2ZZu8mLvJZ
+; APP版本号
+appversion = 9.0.12
+
+[collector]
+; 这里无关紧要
+collectwid = 53593
+instancewid = 112
+formwid = 3088
+schooltaskwid = 196052
+
+[Cookie]
+; 这里无关紧要
+hwwafsesid = e20e17308696a3d086
+hwwafsestime = 1642603065157
+ticket = ST-iap:1018615903074546:ST:2953c986-198e-4008-9b56-518cefaf559c:20220119223747
+
