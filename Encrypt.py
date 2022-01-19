@@ -58,7 +58,7 @@ def GenDeviceID(username):
                 deviceId = deviceId+str(num % 9)
             else:
                 deviceId = deviceId+chr(num)
-        deviceId = deviceId+config.get('user', "model")
+        # deviceId = deviceId+config.get('user', "model")
         return deviceId
 # BodyString
 def GenBodyString(form):

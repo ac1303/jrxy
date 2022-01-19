@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-from asyncio.windows_events import NULL
 import configparser
 import json
 from math import e
 import re
 import os
 
-from requests.api import head
+import requests
 import Encrypt
 import requests
 import datetime
@@ -177,6 +176,7 @@ class getLoginInfo:
                 "version": "first_v2",
                 "lat": self.config.get('user', "lat")}
         body['sign'] = Encrypt.SignForm(body)
+        print(Encrypt.GenDeviceID(self.config.get('user', "studentid")))
         extension = {
             "lon": self.config.get('user', "lon"),
             "lat": self.config.get('user', "lat"),
