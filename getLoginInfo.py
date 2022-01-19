@@ -176,7 +176,6 @@ class getLoginInfo:
                 "version": "first_v2",
                 "lat": self.config.get('user', "lat")}
         body['sign'] = Encrypt.SignForm(body)
-        print(Encrypt.GenDeviceID(self.config.get('user', "studentid")))
         extension = {
             "lon": self.config.get('user', "lon"),
             "lat": self.config.get('user', "lat"),
