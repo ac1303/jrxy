@@ -10,11 +10,12 @@ address_city = 南阳市
 address_region = 卧龙区
 ; 手机型号
 model = Redmi K20 Pro Premium Edition
-; 这里填server酱的推送key
-servesendkey = SCT81708Tgz4lewIrwFEqcDaXN8MvpUYP
+; 这里填pushdeer的推送密钥
+pushdeer = PDU4477T9s84NUvrYQASjr87acp6R6Aaak9p****
 
 [url]
 ; 不可擅自修改这里的内容
+pushdeer_url = https://api2.pushdeer.com/message/push
 login_url = http://cas.huat.edu.cn/authserver/login
 gethww_url = https://huat.campusphere.net/wec-portal-mobile/client/
 cas_url = https://huat.campusphere.net/iap/login?service=https://huat.campusphere.net/wec-portal-mobile/client/

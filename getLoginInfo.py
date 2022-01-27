@@ -24,6 +24,20 @@ class getLoginInfo:
         self.password=config.get('user', "passWord")
         self.session=requests.Session()
 
+    def pushDeer(self,text):
+        key=self.config.get('user','pushDeer')
+        if(len(key)==40):
+            print(datetime.datetime.now(),"开始推送数据到手机")
+            url=self.config.get('url', "pushDeer_url")+"?pushkey="+key+"&text="+text
+            req = json.loads(requests.get(url=url).text)
+            if(req['content']['result']==False):
+                print(datetime.datetime.now(),"密钥不正确")
+            else:
+                for list in req['content']['result']:
+                    print(datetime.datetime.now(),"设备："+list['trace_id'],"推送"+list['description'])
+        else:
+            print(datetime.datetime.now(),"PushDeer的推送密钥不正确，请重新填写")
+
     def login(self):
         print(datetime.datetime.now(),"开始获取登录页面...")
         # 清空字典，避免出现无效cookie
@@ -199,4 +213,5 @@ class getLoginInfo:
         self.head['Cookie'] = 'HWWAFSESID='+self.config.get('Cookie', "HWWAFSESID")+'; HWWAFSESTIME='+self.config.get('Cookie', "HWWAFSESTIME")+'; MOD_AUTH_CAS='+self.config.get('Cookie', "ticket")
         # print(json.dumps(body))
         r = json.loads(requests.post(self.config.get('url', "collector_submitForm_url"), data=json.dumps(body), headers=self.head).text)
-        print(datetime.datetime.now(),"任务打卡数据为：",r)
+        print(datetime.datetime.now(),"任务打卡数据为：",r,"\n")
+        self.pushDeer("今日校园打卡："+r['message'])
